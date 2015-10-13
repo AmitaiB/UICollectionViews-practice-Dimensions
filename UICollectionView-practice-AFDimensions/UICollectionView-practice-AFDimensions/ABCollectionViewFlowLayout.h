@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ABCollectionViewLayoutAttributes.h"
 
 @interface ABCollectionViewFlowLayout : UICollectionViewFlowLayout
+
+@property (nonatomic, assign) ABCollectionViewFlowLayoutMode layoutMode;
 
 @end

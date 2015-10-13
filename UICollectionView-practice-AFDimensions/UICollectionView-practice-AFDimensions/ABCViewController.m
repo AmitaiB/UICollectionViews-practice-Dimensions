@@ -30,7 +30,7 @@
     
     UISegmentedControl *aspectChangeSegmentedControl;
     
-    ABCollectionViewFlowLayout *photoColletionViewLayout;
+    ABCollectionViewFlowLayout *photoCollectionViewLayout;
 }
 
 static NSString * const cellReuseIdentifier = @"CellReuseID";
@@ -39,10 +39,10 @@ static NSString * const cellReuseIdentifier = @"CellReuseID";
         //Create our view
     
         // Instantiate custom flow layout.
-    photoColletionViewLayout = [ABCollectionViewFlowLayout new];
+    photoCollectionViewLayout = [ABCollectionViewFlowLayout new];
     
         // Create a new collectionView + customFLayout, set delegate and data source.
-    UICollectionView *photoCollectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:photoColletionViewLayout];
+    UICollectionView *photoCollectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:photoCollectionViewLayout];
     photoCollectionView.dataSource        = self;
     photoCollectionView.delegate          = self;
     
@@ -111,10 +111,29 @@ static NSString * const cellReuseIdentifier = @"CellReuseID";
 #pragma mark - === UI Interaction ===
  
  -(void)aspectChangeSegmentedControlDidChangeValue:(id)sender {
-     
+         //We need to explicitly tell the collection view layout that we want the change *animated*.
+     [UIView animateWithDuration:0.55f animations:^{
+             //This just swaps the two values
+         
+         if (photoCollectionViewLayout.layoutMode == ABCollectionViewFlowLayoutModeAspectFill) {
+             photoCollectionViewLayout.layoutMode = ABCollectionViewFlowLayoutModeAspectFit;
+         }
+         else
+         {
+             photoCollectionViewLayout.layoutMode = ABCollectionViewFlowLayoutModeAspectFill;
+         }
+     }];
  }
  
 @end
+
+
+
+
+
+
+
+
 
 
 @implementation ABCViewController (Private)
