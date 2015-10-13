@@ -16,15 +16,17 @@
 
 @end
 
-@implementation ABCViewController
+@implementation ABCViewController {
+    NSArray *photoModelArray;
+}
 
 static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
+    photoModelArray = [NSArray array];
+    
     
     // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
@@ -102,7 +104,7 @@ static NSString * const reuseIdentifier = @"Cell";
 @end
 
 
-@implementation AFViewController (Private)
+@implementation ABCViewController (Private)
 
 -(void)setupModel
 {
