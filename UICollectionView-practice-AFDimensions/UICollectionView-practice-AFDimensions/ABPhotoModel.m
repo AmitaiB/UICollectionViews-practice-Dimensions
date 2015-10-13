@@ -10,4 +10,13 @@
 
 @implementation ABPhotoModel
 
++(instancetype)photoModelWithName:(NSString *)name image:(UIImage *)image {
+    ABPhotoModel *model = [ABPhotoModel new];
+    
+    model.name = name;
+    model.image = image;
+    
+    return model;
+}
+
 @end

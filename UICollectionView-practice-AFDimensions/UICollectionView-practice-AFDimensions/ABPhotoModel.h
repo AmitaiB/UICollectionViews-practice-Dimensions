@@ -10,6 +10,9 @@
 
 @interface ABPhotoModel : NSObject
 
-+(instancetype)photoModelWithName:(NSString*)name image:(UIImage)
++(instancetype)photoModelWithName:(NSString*)name image:(UIImage*)image;
+
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, strong) UIImage *image;
 
 @end
