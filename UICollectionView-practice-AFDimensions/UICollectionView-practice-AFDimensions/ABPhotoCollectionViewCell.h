@@ -10,4 +10,7 @@
 
 @interface ABPhotoCollectionViewCell : UICollectionViewCell
 
+    //This quasi-synthesizing, but of a *non*-property, is good MVC practices
+-(void)setImage:(UIImage *)image;
+
 @end

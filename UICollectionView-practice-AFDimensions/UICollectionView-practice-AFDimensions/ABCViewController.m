@@ -66,16 +66,30 @@ static NSString * const cellReuseIdentifier = @"CellReuseID";
     [self setupModel];
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    
+    aspectChangeSegmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"Aspect Fit", @"Aspect Fill" ]];
+    aspectChangeSegmentedControl.selectedSegmentIndex = 0;
+    [aspectChangeSegmentedControl addTarget:self
+                                     action:@selector(aspectChangeSegmentedControlDidChangeValue:)
+                           forControlEvents:UIControlEventValueChanged];
+    self.navigationItem.titleView = aspectChangeSegmentedControl;
 }
-*/
+
+#pragma mark - Helper methods
+
+-(ABPhotoModel *)photoModelForIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.item >= [photoModelArray count]) return nil;
+    
+    return photoModelArray[indexPath.item];
+}
+
+    //Configures a cell for a given indexPath
+-(void)configureCell:(ABPhotoCollectionViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
+        //set the image for the cell
+
+}
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -129,6 +143,12 @@ static NSString * const cellReuseIdentifier = @"CellReuseID";
 }
 */
 
+#pragma mark - === UI Interaction ===
+ 
+ -(void)aspectChangeSegmentedControlDidChangeValue:(id)sender {
+     
+ }
+ 
 @end
 
 
