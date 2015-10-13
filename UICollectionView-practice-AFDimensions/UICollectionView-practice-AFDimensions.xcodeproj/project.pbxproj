@@ -13,6 +13,8 @@
 		38F9E58F1BCD861100B8AF29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F9E58D1BCD861100B8AF29 /* LaunchScreen.storyboard */; };
 		38F9E5991BCD86E800B8AF29 /* ABCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F9E5981BCD86E800B8AF29 /* ABCViewController.m */; settings = {ASSET_TAGS = (); }; };
 		38F9E59D1BCD890100B8AF29 /* ABPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F9E59C1BCD890100B8AF29 /* ABPhotoModel.m */; settings = {ASSET_TAGS = (); }; };
+		38F9E5A11BCD924E00B8AF29 /* ABCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F9E5A01BCD924E00B8AF29 /* ABCollectionViewFlowLayout.m */; settings = {ASSET_TAGS = (); }; };
+		38F9E5A51BCD940400B8AF29 /* ABPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F9E5A41BCD940400B8AF29 /* ABPhotoCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		38F9E59B1BCD890100B8AF29 /* ABPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABPhotoModel.h; sourceTree = "<group>"; };
 		38F9E59C1BCD890100B8AF29 /* ABPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABPhotoModel.m; sourceTree = "<group>"; };
 		38F9E59E1BCD894F00B8AF29 /* UICollectionView-practice-AFDimensions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UICollectionView-practice-AFDimensions-Prefix.pch"; sourceTree = "<group>"; };
+		38F9E59F1BCD924E00B8AF29 /* ABCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		38F9E5A01BCD924E00B8AF29 /* ABCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		38F9E5A31BCD940400B8AF29 /* ABPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		38F9E5A41BCD940400B8AF29 /* ABPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABPhotoCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 		38F9E5841BCD861100B8AF29 /* UICollectionView-practice-AFDimensions */ = {
 			isa = PBXGroup;
 			children = (
+				38F9E5A21BCD925500B8AF29 /* Views */,
 				38F9E5961BCD86BB00B8AF29 /* Controllers */,
 				38F9E59A1BCD88E600B8AF29 /* Models */,
 				38F9E5881BCD861100B8AF29 /* AppDelegate.h */,
@@ -97,6 +104,17 @@
 				38F9E59C1BCD890100B8AF29 /* ABPhotoModel.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		38F9E5A21BCD925500B8AF29 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				38F9E5A31BCD940400B8AF29 /* ABPhotoCollectionViewCell.h */,
+				38F9E5A41BCD940400B8AF29 /* ABPhotoCollectionViewCell.m */,
+				38F9E59F1BCD924E00B8AF29 /* ABCollectionViewFlowLayout.h */,
+				38F9E5A01BCD924E00B8AF29 /* ABCollectionViewFlowLayout.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,8 +188,10 @@
 			files = (
 				38F9E58A1BCD861100B8AF29 /* AppDelegate.m in Sources */,
 				38F9E5871BCD861100B8AF29 /* main.m in Sources */,
+				38F9E5A51BCD940400B8AF29 /* ABPhotoCollectionViewCell.m in Sources */,
 				38F9E5991BCD86E800B8AF29 /* ABCViewController.m in Sources */,
 				38F9E59D1BCD890100B8AF29 /* ABPhotoModel.m in Sources */,
+				38F9E5A11BCD924E00B8AF29 /* ABCollectionViewFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
