@@ -9,6 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "ABCollectionViewLayoutAttributes.h"
 
+#define kMaxItemDimension   140
+#define kMaxItemSize        CGSizeMake(kMaxItemDimension, kMaxItemDimension)
+
+@protocol ABCollectionViewDelegateFlowLayout <UICollectionViewDelegateFlowLayout>
+
+@optional
+
+-(ABCollectionViewFlowLayoutMode)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout layoutModeForItemAtIndexPath:(NSIndexPath *)indexPath;
+
+@end
+
 @interface ABCollectionViewFlowLayout : UICollectionViewFlowLayout
 
 @property (nonatomic, assign) ABCollectionViewFlowLayoutMode layoutMode;
