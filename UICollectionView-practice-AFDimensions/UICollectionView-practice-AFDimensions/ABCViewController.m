@@ -54,13 +54,18 @@ static NSString * const cellReuseIdentifier = @"CellReuseID";
     // Register cell classes
     [photoCollectionView registerClass:[ABPhotoCollectionViewCell class] forCellWithReuseIdentifier:cellReuseIdentifier];
     
-    // Do any additional setup after loading the view.
+        //Set up the collection view to cover the whole screen.
+    photoCollectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    photoCollectionView.allowsSelection = NO;
+    photoCollectionView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
+    
+        // Finally, set our collectionView (since we are a collection view controller, this also sets self.view)
+    self.collectionView = photoCollectionView;
+    
+        // Set up our model
+    [self setupModel];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 /*
 #pragma mark - Navigation
