@@ -7,7 +7,12 @@
 //
 
 #import "ABPhotoCollectionViewCell.h"
+#import "ABCollectionViewFlowLayout.h"
 
 @implementation ABPhotoCollectionViewCell
+{
+    UIImageView *imageView;
+//    ABCollectionViewFlowLayoutMode layoutMode;
+}
 
 @end
