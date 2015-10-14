@@ -56,6 +56,14 @@
     return attributesArray;
 }
 
+-(UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
+    ABCollectionViewLayoutAttributes *attributes = (ABCollectionViewLayoutAttributes *)[super layoutAttributesForItemAtIndexPath:indexPath];
+    
+    [self applyLayoutAttributes:attributes];
+    
+    return attributes;
+}
+
 #pragma mark - Overridden Properties
 
 -(void)setLayoutMode:(ABCollectionViewFlowLayoutMode)layoutMode {
