@@ -42,7 +42,7 @@
 #pragma mark - === Public Methods ===
 
 -(void)setImage:(UIImage *)image {
-    [self setImage:image];
+    [imageView setImage:image];
     
     [self setImageViewFrame];
 }

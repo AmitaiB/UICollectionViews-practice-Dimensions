@@ -13,7 +13,8 @@ typedef NS_ENUM(NSUInteger, ABCollectionViewFlowLayoutMode) {
     ABCollectionViewFlowLayoutModeAspectFill
 };
 
-@interface ABCollectionViewLayoutAttributes : UICollectionViewLayoutAttributes <NSCopying>
+@interface ABCollectionViewLayoutAttributes : UICollectionViewLayoutAttributes
+//<NSCopying>
 
 @property (nonatomic, assign) ABCollectionViewFlowLayoutMode layoutMode;
 
