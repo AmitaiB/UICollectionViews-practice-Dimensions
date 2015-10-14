@@ -71,9 +71,7 @@ static NSString * const cellReuseIdentifier = @"CellReuseID";
     
     aspectChangeSegmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"Aspect Fit", @"Aspect Fill" ]];
     aspectChangeSegmentedControl.selectedSegmentIndex = 0;
-    [aspectChangeSegmentedControl addTarget:self
-                                     action:@selector(aspectChangeSegmentedControlDidChangeValue:)
-                           forControlEvents:UIControlEventValueChanged];
+    [aspectChangeSegmentedControl addTarget:self action:@selector(aspectChangeSegmentedControlDidChangeValue:) forControlEvents:UIControlEventValueChanged];
     self.navigationItem.titleView = aspectChangeSegmentedControl;
 }
 
@@ -112,10 +110,11 @@ static NSString * const cellReuseIdentifier = @"CellReuseID";
  
  -(void)aspectChangeSegmentedControlDidChangeValue:(id)sender {
          //We need to explicitly tell the collection view layout that we want the change *animated*.
-     [UIView animateWithDuration:0.55f animations:^{
+     [UIView animateWithDuration:0.5f animations:^{
              //This just swaps the two values
          
-         if (photoCollectionViewLayout.layoutMode == ABCollectionViewFlowLayoutModeAspectFill) {
+         if (photoCollectionViewLayout.layoutMode == ABCollectionViewFlowLayoutModeAspectFill)
+         {
              photoCollectionViewLayout.layoutMode = ABCollectionViewFlowLayoutModeAspectFit;
          }
          else
