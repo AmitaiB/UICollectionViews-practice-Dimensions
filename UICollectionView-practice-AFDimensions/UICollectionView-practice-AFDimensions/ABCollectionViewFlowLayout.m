@@ -47,7 +47,13 @@
 #pragma mark === Cell Layout ===
 
 -(NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
-    
+    NSArray *attributesArray = [super layoutAttributesForElementsInRect:rect];
+
+    for (ABCollectionViewLayoutAttributes *attributes in attributesArray) {
+        [self applyLayoutAttributes:attributes];
+    }
+
+    return attributesArray;
 }
 
 #pragma mark - Overridden Properties

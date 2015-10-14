@@ -50,6 +50,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38C1B1821BCDD2EA0069A262 /* CollectionView Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				38F9E59F1BCD924E00B8AF29 /* ABCollectionViewFlowLayout.h */,
+				38F9E5A01BCD924E00B8AF29 /* ABCollectionViewFlowLayout.m */,
+				38C1B17F1BCD9A750069A262 /* ABCollectionViewLayoutAttributes.h */,
+				38C1B1801BCD9A750069A262 /* ABCollectionViewLayoutAttributes.m */,
+			);
+			name = "CollectionView Extensions";
+			sourceTree = "<group>";
+		};
 		38F9E5791BCD861100B8AF29 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +80,7 @@
 		38F9E5841BCD861100B8AF29 /* UICollectionView-practice-AFDimensions */ = {
 			isa = PBXGroup;
 			children = (
+				38C1B1821BCDD2EA0069A262 /* CollectionView Extensions */,
 				38F9E5A21BCD925500B8AF29 /* Views */,
 				38F9E5961BCD86BB00B8AF29 /* Controllers */,
 				38F9E59A1BCD88E600B8AF29 /* Models */,
@@ -112,12 +124,8 @@
 		38F9E5A21BCD925500B8AF29 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				38C1B17F1BCD9A750069A262 /* ABCollectionViewLayoutAttributes.h */,
-				38C1B1801BCD9A750069A262 /* ABCollectionViewLayoutAttributes.m */,
 				38F9E5A31BCD940400B8AF29 /* ABPhotoCollectionViewCell.h */,
 				38F9E5A41BCD940400B8AF29 /* ABPhotoCollectionViewCell.m */,
-				38F9E59F1BCD924E00B8AF29 /* ABCollectionViewFlowLayout.h */,
-				38F9E5A01BCD924E00B8AF29 /* ABCollectionViewFlowLayout.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
