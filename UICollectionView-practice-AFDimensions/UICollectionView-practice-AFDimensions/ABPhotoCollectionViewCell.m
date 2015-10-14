@@ -38,7 +38,20 @@
     
     [imageView setImage:nil];
 }
+#pragma mark - === Overridden Methods ===
 
+-(void)applyLayoutAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes {
+    [super applyLayoutAttributes:layoutAttributes];
+    
+    if (![layoutAttributes isKindOfClass:[ABCollectionViewLayoutAttributes class]]) {
+        return;
+    }
+    
+    ABCollectionViewLayoutAttributes *castedLayoutAttributes = (ABCollectionViewLayoutAttributes *)layoutAttributes;
+    layoutMode = castedLayoutAttributes.layoutMode;
+    
+    [self setImageViewFrame];
+}
 #pragma mark - === Public Methods ===
 
 -(void)setImage:(UIImage *)image {
