@@ -1,0 +1,17 @@
+digraph G {
+	node [shape=box];
+	"ABCollectionViewLayoutAttributes" -> {};
+	"ABCollectionViewFlowLayout" -> "ABCollectionViewLayoutAttributes";
+	"AppDelegate" -> "ABCViewController";
+	"ABPhotoCollectionViewCell" -> "ABCollectionViewFlowLayout";
+	"ABCViewController" -> "ABPhotoCollectionViewCell";
+	"ABCViewController" -> "ABPhotoModel";
+	"ABCViewController" -> "ABCollectionViewFlowLayout";
+	"ABPhotoModel" -> {};
+	"main" -> "AppDelegate";
+	
+	"UICollectionView-practice-AFDimensions-Prefix" [color=red];
+	
+	edge [color=blue, dir=both];
+}
+
